@@ -5,12 +5,15 @@ import cartBcg from '../images/storeBcg.jpeg';
 import CartSection from '../components/CartPage';
 
 
-export default function CartPage() {
+export default function CartPage(props) {
+
+  console.log(props);
+
   return (
     <>
       <Hero img ={cartBcg} />
-      <h1>Hello From Cart Page</h1>
-      <CartSection />
+      
+      <CartSection history={props.history} />
     </>
   );
 }
